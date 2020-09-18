@@ -1,0 +1,24 @@
+{
+  "name": "theidealpurchase",
+  "version": "1.0.0",
+  "description": "Web application to make optimized purchases in multiple supermarkets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimasmendoza/TheIdealPurchase.git"
+  },
+  "keywords": [
+    "\"node\"",
+    "\"react",
+    "\"sass\""
+  ],
+  "author": "Dimas Mendoza <damendoza98@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimasmendoza/TheIdealPurchase/issues"
+  },
+  "homepage": "https://github.com/dimasmendoza/TheIdealPurchase#readme"
+}
