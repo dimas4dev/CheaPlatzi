@@ -1,0 +1,35 @@
+@import '../vars.scss';
+
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 9px 23px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button--search {
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 9px 23px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.button--search:focus {
+  outline: none;
+}
+
+.button--space{
+  margin-left: 30px;
+}
+
+.button--yellow {
+  background-color: $color-tertiary;
+}

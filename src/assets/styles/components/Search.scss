@@ -1,0 +1,16 @@
+@import '../vars.scss';
+
+form {
+  .search__input {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    padding: 9px 23px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  .search__input:focus {
+    outline: none;
+  }
+}

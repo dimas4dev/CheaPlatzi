@@ -1,0 +1,36 @@
+@import '../vars.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: $color-main;
+
+  &__logo {
+    margin-left: 60px;
+  }
+
+  .container__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+  }
+
+  &__search--avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+    figure {
+      margin-right: 60px;
+
+      .avatar {
+        border-radius: 50px;
+      }
+
+    }
+  }
+}
