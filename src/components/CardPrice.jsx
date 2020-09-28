@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import '../assets/styles/components/CardPrice.scss';
 
 const CardPrice = ({
@@ -11,7 +11,7 @@ const CardPrice = ({
   productLink,
 }) => {
   return (
-    <>
+    <section className='cardPrice'>
       <div className='link__container'>
         <Link to='/' className='link'>
           <div className='link__button--regresar'>
@@ -46,7 +46,7 @@ const CardPrice = ({
           </Link>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
