@@ -4,7 +4,7 @@
 
 .cardPrice__title {
   text-align: center;
-  font-family: 'Roboto';
+  font-family: $font-primary;
   margin: 1em 0;
 }
 
@@ -16,7 +16,7 @@
 .link {
   color: $color-black;
   text-decoration: none;
-  font-family: 'Roboto';
+  font-family: $font-primary;
   &__button--regresar {
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
   box-shadow: 0px 0px 1px 1px #1c4cb6;
   margin: auto;
   border-radius: 10px;
-  font-family: 'Roboto';
+  font-family: $font-primary;
   align-items: center;
   justify-items: center;
   width: 90%;
