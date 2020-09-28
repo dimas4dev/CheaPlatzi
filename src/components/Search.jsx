@@ -4,10 +4,10 @@ import Button from './Button';
 
 import '../assets/styles/components/Search.scss';
 
-const Search = ({ guide, action, styles }) => {
+const Search = ({ guide, action, styles, inputStyles }) => {
   return (
     <form>
-      <input className='search__input' placeholder={guide} />
+      <input className={inputStyles} placeholder={guide} />
       <Button text={action} classnames={styles} />
     </form>
   );

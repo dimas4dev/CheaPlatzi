@@ -9,8 +9,30 @@
   color: $color-black;
 }
 
-.button:focus {
+.button--register {
+  width: 350px;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 23px;
+  font-size: 35px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.button:focus,
+.button--search:focus,
+.button--home:focus,
+.button--popular:focus,
+.button--register:focus {
   outline: none;
+}
+
+.button,
+.button--search,
+.button--home,
+.button--popular,
+.button--register {
+  cursor: pointer;
 }
 
 .button--search {
@@ -22,8 +44,26 @@
   color: $color-black;
 }
 
-.button--search:focus {
-  outline: none;
+.button--home {
+  border: solid 1px $color-black;
+  border-radius: 0 20px 20px 0;
+  width: 300px;
+  padding: 9px 23px;
+  background-color: $color-main;
+  font-size: 30px;
+  font-weight: 700;
+  color: $color-white;
+}
+
+.button--popular {
+  border: none;
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  padding: 9px 23px;
+  background-color: $color-main;
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-white;
 }
 
 .button--space{

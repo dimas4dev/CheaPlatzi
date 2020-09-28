@@ -6,7 +6,7 @@ const Button = (props) => {
   const { text, classnames } = props;
   return (
 
-    <button type='button' className={classnames}>
+    <button type='search' className={classnames}>
       {text}
     </button>
 

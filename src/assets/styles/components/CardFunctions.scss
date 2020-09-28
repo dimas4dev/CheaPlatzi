@@ -1,0 +1,14 @@
+@import '../vars.scss';
+
+.card--function {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-white;
+  }
+}

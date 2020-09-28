@@ -27,7 +27,7 @@ const Header = ({ location }) => {
 
       {location.pathname !== '/' && (
         <div className='header__search--avatar'>
-          <Search guide='¿Qué artículo buscas?' action='Buscar' styles='button--search button--yellow' />
+          <Search inputStyles='search__input' guide='¿Qué artículo buscas?' action='Buscar' styles='button--search button--yellow' />
           <figure>
             <img className='avatar' src={avatar} alt='Avatar de usuario' />
           </figure>

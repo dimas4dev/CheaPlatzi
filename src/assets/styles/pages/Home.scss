@@ -1,0 +1,45 @@
+.home {
+
+  padding: 90px 100px;
+
+  &__tittle {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 50px;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+
+  &__functions {
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .container__functions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+  }
+
+  &__popular {
+    font-size: 35px;
+    margin: 90px 0 30px 0;
+  }
+
+  &__choose {
+    margin: 90px 0 40px 0;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  &__button--register {
+    display: flex;
+    justify-content: center;
+  }
+}
