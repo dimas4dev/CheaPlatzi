@@ -1,7 +1,7 @@
 @import '../vars.scss';
 
 form {
-  .search__input {
+  .contact__input {
     border: none;
     border-radius: 10px 0 0 10px;
     padding: 9px 23px;
@@ -11,7 +11,8 @@ form {
     text-align: center;
   }
 
-  .search__input:focus {
+  .contact__input:focus {
     outline: none;
   }
+
 }

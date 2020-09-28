@@ -4,7 +4,7 @@ import { withRouter, Link } from 'react-router-dom';
 import Button from './Button';
 import Search from './Search';
 
-import Logo from '../assets/images/vsBuyLogo.png';
+import Logo from '../assets/images/VsBuyLogo.png';
 import avatar from '../assets/images/avatar.png';
 import '../assets/styles/components/Header.scss';
 
@@ -18,14 +18,14 @@ const Header = ({ location }) => {
         </figure>
       </Link>
 
-      {location.pathname === '/h' && (
+      {location.pathname === '/' && (
         <div className='container__buttons'>
           <Button className='button__space' text='Login' classnames='button' />
           <Button className='button__space' text='Sign up' classnames='button button--space button--yellow' />
         </div>
       )}
 
-      {location.pathname === '/' && (
+      {location.pathname !== '/' && (
         <div className='header__search--avatar'>
           <Search guide='¿Qué artículo buscas?' action='Buscar' styles='button--search button--yellow' />
           <figure>

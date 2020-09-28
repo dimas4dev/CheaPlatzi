@@ -1,0 +1,24 @@
+@import '../vars.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  background-color: $color-main;
+  padding: 20px 60px;
+
+  &__contact {
+    p {
+      margin-bottom: 25px;
+      color: $color-white;
+      font-size: 20px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    figure {
+      margin-left: 28px;
+    }
+  }
+}
