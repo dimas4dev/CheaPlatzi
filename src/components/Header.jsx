@@ -11,7 +11,6 @@ import '../assets/styles/components/Header.scss';
 const Header = ({ location }) => {
   return (
     <header className='header'>
-
       <Link className='header__logo' to='/'>
         <figure>
           <img src={Logo} alt='Logo de VsBuy' />
@@ -21,19 +20,27 @@ const Header = ({ location }) => {
       {location.pathname === '/' && (
         <div className='container__buttons'>
           <Button className='button__space' text='Login' classnames='button' />
-          <Button className='button__space' text='Sign up' classnames='button button--space button--yellow' />
+          <Button
+            className='button__space'
+            text='Sign up'
+            classnames='button button--space button--yellow'
+          />
         </div>
       )}
 
       {location.pathname !== '/' && (
         <div className='header__search--avatar'>
-          <Search inputStyles='search__input' guide='¿Qué artículo buscas?' action='Buscar' styles='button--search button--yellow' />
+          <Search
+            inputStyles='search__input'
+            guide='¿Qué artículo buscas?'
+            action='Buscar'
+            styles='button--search button--yellow'
+          />
           <figure>
             <img className='avatar' src={avatar} alt='Avatar de usuario' />
           </figure>
         </div>
       )}
-
     </header>
   );
 };

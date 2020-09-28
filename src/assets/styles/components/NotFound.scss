@@ -1,0 +1,28 @@
+@import '../vars.scss';
+
+.notFound {
+  background: url('https://media.discordapp.net/attachments/757783671263592500/758174863726346240/login.png?width=884&height=434');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-primary;
+  &__title {
+    font-size: 5em;
+    font-weight: 600;
+    text-shadow: 5px 5px black;
+  }
+  &__subtitle {
+    margin: 1em 0;
+    text-align: center;
+  }
+  &__image {
+    width: 500px;
+  }
+}
