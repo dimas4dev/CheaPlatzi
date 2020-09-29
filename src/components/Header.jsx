@@ -1,14 +1,14 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 import Button from './Button';
 import Search from './Search';
 
-import Logo from '../assets/images/VsBuyLogo.png';
+import Logo from '../assets/images/logo.svg';
 import avatar from '../assets/images/avatar.png';
 import '../assets/styles/components/Header.scss';
 
-const Header = ({ location }) => {
+const Header = ({location}) => {
   return (
     <header className='header'>
       <Link className='header__logo' to='/'>
@@ -27,7 +27,6 @@ const Header = ({ location }) => {
           />
         </div>
       )}
-
       {location.pathname !== '/' && (
         <div className='header__search--avatar'>
           <Search
@@ -41,6 +40,9 @@ const Header = ({ location }) => {
           </figure>
         </div>
       )}
+      {/* {location.pathname !== '/login' && (
+        <header className='header' style={{display: 'none'}}></header>
+      )} */}
     </header>
   );
 };

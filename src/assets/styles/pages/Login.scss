@@ -1,56 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-$fontSize: 16px;
-$fontFamily: "Roboto", sans-serif;
-$button-color: #f0a500;
-// $background-image: url("../../assets/images/LoginBackground.svg");
+@import '../vars.scss';
+
 body {
-  // background-image: $background-image;
   font-size: $fontSize;
-  font-family: $fontFamily;
+  font-family: $font-primary;
+}
+.Login {
+  background: url('https://media.discordapp.net/attachments/757783671263592500/758174863726346240/login.png?width=884&height=434');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 .Container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(500px, auto));
   font-size: 1.2em;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  place-content: center;
   &__Logo {
-    border-right: 1px solid black;
-    position: relative;
-    width: 462px;
+    border-right: 2px solid $color-white;
+    width: 500px;
     height: 327px;
-    left: 15%;
-    top: 40.49%;
     img {
-      position: relative;
-      bottom: -90px;
-      left: 50px;
+      width: 95%;
+      height: 100%;
     }
   }
   .Form {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    position: relative;
-    top: 40%;
+    & h2 {
+      color: $color-white;
+    }
     &__Input {
       font-size: 1em;
       border-radius: 0.3125em;
-      width: 400px;
+      max-width: 400px;
       height: 40px;
+      border: none;
+      padding-left: 10px;
     }
     &__Links {
-      &--space {
-        display: inherit;
-        margin-right: 10px;
+      color: $color-white;
+      // &--space {
+      //   display: inherit;
+      //   margin-right: 10px;
+      // }
+      & label,
+      & a {
+        font-size: 0.9em;
       }
-      a {
-        margin-left: 10px;
+      & a {
+        margin-left: 30px;
+        color: $color-white;
+      }
+      & input {
+        margin-right: 5px;
       }
     }
     button {
-      width: 400px;
+      max-width: 400px;
       height: 40px;
-      background-color: $button-color;
+      background-color: $color-tertiary;
       font-size: 1.5rem;
+      border-radius: 5px;
+      border: none;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Container {
+    grid-template-columns: repeat(auto-fill, minmax(450px, auto));
+  }
+}
+
+@media (max-width: 768px) {
+  .Container__Logo {
+    width: 300px;
+    height: 200px;
+    border: none;
+  }
+  .Container .Form {
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 425px) {
+  .Container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 90%));
+  }
+  .Container__Logo {
+    width: 80%;
+  }
+  .Container .Form {
+    width: 100%;
+  }
+  .Container .Form__Links a {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .Container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 80%));
+  }
+  .Container .Form__Input {
+    font-size: 0.8em;
+  }
+  .Container .Form h2 {
+    font-size: 1.2em;
   }
 }
