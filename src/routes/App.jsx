@@ -1,8 +1,6 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import LoginPage from "../components/Login/Login";
 
-const App = () => (
-  <h1>Hola mundo</h1>
-);
-
+const App = () => <LoginPage />;
 export default App;

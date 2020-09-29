@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$fontSize: 16px;
+$fontFamily: "Roboto", sans-serif;
+$button-color: #f0a500;
+$background-image: url("../../assets/images/LoginBackground.svg");
+body {
+  background-image: $background-image;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+}
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2em;
+  &__Logo {
+    border-right: 1px solid black;
+    position: relative;
+    width: 462px;
+    height: 327px;
+    left: 15%;
+    top: 40.49%;
+    img {
+      position: relative;
+      bottom: -90px;
+      left: 50px;
+    }
+  }
+  .Form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    position: relative;
+    top: 40%;
+    &__Input {
+      font-size: 1em;
+      border-radius: 0.3125em;
+      width: 400px;
+      height: 40px;
+    }
+    &__Links {
+      &--space {
+        display: inherit;
+        margin-right: 10px;
+      }
+      a {
+        margin-left: 10px;
+      }
+    }
+    button {
+      width: 400px;
+      height: 40px;
+      background-color: $button-color;
+      font-size: 1.5rem;
+    }
+  }
+}
