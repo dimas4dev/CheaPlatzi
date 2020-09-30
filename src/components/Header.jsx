@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter, Link} from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import Button from './Button';
 import Search from './Search';
@@ -8,7 +8,7 @@ import Logo from '../assets/images/logo.svg';
 import avatar from '../assets/images/avatar.png';
 import '../assets/styles/components/Header.scss';
 
-const Header = ({location}) => {
+const Header = ({ location }) => {
   return (
     <header className='header'>
       <Link className='header__logo' to='/'>
@@ -19,7 +19,13 @@ const Header = ({location}) => {
 
       {location.pathname === '/' && (
         <div className='container__buttons'>
-          <Button className='button__space' text='Login' classnames='button' />
+          <Link to='/login'>
+            <Button
+              className='button__space'
+              text='Login'
+              classnames='button'
+            />
+          </Link>
           <Button
             className='button__space'
             text='Sign up'
