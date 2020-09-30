@@ -5,7 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   margin: 0 auto;
   display: flex;
@@ -24,5 +24,39 @@
   }
   &__image {
     width: 500px;
+  }
+  &__button {
+    border: none;
+    border-radius: 5px;
+    padding: 9px 23px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #3c3c3b;
+    background: #f0a500;
+    text-align: center;
+    text-decoration: none;
+    margin: 1em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .notFound__title {
+    font-size: 4em;
+  }
+  .notFound__image {
+    width: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+  .notFound__title {
+    font-size: 3em;
+  }
+  .notFound__subtitle {
+    font-size: 1.2em;
+    width: 300px;
+  }
+  .notFound__image {
+    width: 300px;
   }
 }

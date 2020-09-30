@@ -28,21 +28,20 @@ const Header = ({location}) => {
         </div>
       )}
       {location.pathname !== '/' && (
-        <div className='header__search--avatar'>
+        <>
           <Search
             inputStyles='search__input'
             guide='¿Qué artículo buscas?'
             action='Buscar'
             styles='button--search button--yellow'
           />
-          <figure>
-            <img className='avatar' src={avatar} alt='Avatar de usuario' />
-          </figure>
-        </div>
+          <div className='header__search--avatar'>
+            <figure>
+              <img className='avatar' src={avatar} alt='Avatar de usuario' />
+            </figure>
+          </div>
+        </>
       )}
-      {/* {location.pathname !== '/login' && (
-        <header className='header' style={{display: 'none'}}></header>
-      )} */}
     </header>
   );
 };

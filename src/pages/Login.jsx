@@ -1,11 +1,19 @@
 import React from 'react';
 import '../assets/styles/pages/Login.scss';
+import CardFunctions from '../components/CardFunctions';
+
 import Logo from '../assets/images/logo.svg';
-// import Logo from '../assets/images/VsBuyLogo.png';
+import backgroundLogin from '../assets/images/background-login.png';
 
 const Login = () => {
   return (
     <section className='Login'>
+      {/* <CardFunctions
+        text=''
+        background={backgroundLogin}
+        className='LoginBackground'
+      /> */}
+      {/* Para Harold ! */}
       <article className='Container'>
         <figure className='Container__Logo'>
           <img src={Logo} alt='Logo' />

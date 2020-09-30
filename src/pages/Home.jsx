@@ -13,26 +13,22 @@ import '../assets/styles/pages/Home.scss';
 const Home = (props) => {
   return (
     <main className='home'>
-
       <h1 className='home__tittle'>
         Compara el precio de múltiples productos en un solo lugar
       </h1>
 
       <div className='home__search'>
-
         <Search
           inputStyles='home__input'
           action='Buscar'
           guide='¿Qué artículo buscas?'
           styles='button--home'
         />
-
       </div>
 
-      <h5 className='home__functions'>¿Cómo funciona?</h5>
+      <h2 className='home__functions'>¿Cómo funciona?</h2>
 
       <div className='container__functions'>
-
         <CardFunctions
           text='Busca el producto que te interesa'
           background={yellow}
@@ -45,23 +41,20 @@ const Home = (props) => {
           text='Y ve directo al lugar de compra'
           background={blue}
         />
-
       </div>
 
-      <h5 className='home__popular'>
-        Artículos populares
-      </h5>
+      <h5 className='home__popular'>Artículos populares</h5>
 
       <ListCards />
 
-      <h5 className='home__choose'>
-        Nosotros comparamos, tú eliges.
-      </h5>
+      <h5 className='home__choose'>Nosotros comparamos, tú eliges.</h5>
 
       <div className='home__button--register'>
-        <Button text='Regístrate' classnames='button--register button--yellow' />
+        <Button
+          text='Regístrate'
+          classnames='button--register button--yellow'
+        />
       </div>
-
     </main>
   );
 };

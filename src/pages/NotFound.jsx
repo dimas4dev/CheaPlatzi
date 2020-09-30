@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import '../assets/styles/pages/NotFound.scss';
 
@@ -9,13 +10,16 @@ const NotFound = () => {
       <h2 className='notFound__subtitle'>
         Aquí no hay nada.
         <br />
-        Intenta buscar algo similar en la parte de arriba.
+        Intenta buscar algo similar de nuevo.
       </h2>
       <img
         src='https://www.alfabetajuega.com/wp-content/uploads/2019/09/pikachu-pokemon-triste-ojos.jpg'
         alt=''
         className='notFound__image'
       />
+      <Link to='/' className='notFound__button'>
+        Home
+      </Link>
     </section>
   );
 };

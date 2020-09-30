@@ -24,7 +24,8 @@
 .button--home:focus,
 .button--popular:focus,
 .button--register:focus {
-  outline: none;
+  outline: 0.2em solid #000;
+  outline-offset: 0.2cm;
 }
 
 .button,
@@ -45,7 +46,7 @@
 }
 
 .button--home {
-  border: solid 1px $color-black;
+  border: solid 1px $color-main;
   border-radius: 0 20px 20px 0;
   width: 300px;
   padding: 9px 23px;
@@ -56,7 +57,7 @@
 }
 
 .button--popular {
-  border: none;
+  border: solid 1px $color-main;
   border-radius: 0 0 15px 15px;
   width: 100%;
   padding: 9px 23px;
@@ -66,7 +67,7 @@
   color: $color-white;
 }
 
-.button--space{
+.button--space {
   margin-left: 30px;
 }
 

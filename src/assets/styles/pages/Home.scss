@@ -1,6 +1,8 @@
-.home {
+@import '../vars.scss';
 
-  padding: 90px 100px;
+.home {
+  padding: 5em;
+  background: $color-grey-light;
 
   &__tittle {
     text-align: center;
@@ -13,6 +15,11 @@
     display: flex;
     justify-content: center;
     margin: 60px 0;
+    & form {
+      display: flex;
+      max-width: 960px;
+      min-width: 280px;
+    }
   }
 
   &__functions {
@@ -21,7 +28,7 @@
     text-align: center;
   }
 
-  .container__functions{
+  .container__functions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px;
@@ -29,11 +36,11 @@
 
   &__popular {
     font-size: 35px;
-    margin: 90px 0 30px 0;
+    margin: 30px 0;
   }
 
   &__choose {
-    margin: 90px 0 40px 0;
+    margin: 50px 0 40px 0;
     font-size: 35px;
     text-align: center;
   }
@@ -41,5 +48,63 @@
   &__button--register {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 3em;
+  }
+  .home .container__functions {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 200px);
+  }
+}
+
+@media (max-width: 620px) {
+  form .home__input,
+  form .button--home {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .home__search form {
+    flex-direction: column;
+  }
+  .home__tittle {
+    font-size: 2em;
+  }
+  form .home__input,
+  form .button--home {
+    font-size: 1.2em;
+  }
+  form .home__input {
+    border-radius: 20px;
+    max-width: 560px;
+    width: 300px;
+  }
+  .button--home {
+    max-width: 300px;
+    width: 200px;
+    margin: 0.5em auto;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .home {
+    padding: 2em 1em;
+  }
+  form .home__input {
+    width: 250px;
+  }
+}
+
+@media (max-width: 320px) {
+  form .home__input {
+    width: 230px;
+  }
+  .home__functions {
+    font-size: 2em;
   }
 }
