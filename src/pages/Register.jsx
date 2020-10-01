@@ -49,9 +49,11 @@ const Register = function () {
     <div style={{ backgroundImage: `url(${BackgroundRegister})` }}>
       <section className="container">
         <div className="container__img">
-          <figure className="img__logo">
-            <img src={logo} alt="logo" />
-          </figure>
+          <Link to='/'>
+            <figure className="img__logo">
+              <img src={logo} alt="logo" />
+            </figure>
+          </Link>
         </div>
         <hr className="separator" />
         <div className="container__form">
