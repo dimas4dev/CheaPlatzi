@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import CardHome from './CardHome';
+import CardHome from "./CardHome";
 
-import '../assets/styles/components/ListCards.scss';
+import "../assets/styles/components/ListCards.scss";
 
 const ListCards = () => {
   return (
-    <div className='list--cards'>
+    <div className="list--cards">
       <CardHome />
       <CardHome />
       <CardHome />
@@ -16,4 +16,3 @@ const ListCards = () => {
 };
 
 export default ListCards;
-

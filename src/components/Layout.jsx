@@ -1,15 +1,15 @@
-import React from 'react';
-import {useLocation} from 'react-router-dom';
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-import Header from './Header';
-import Footer from './Footer';
+import Header from "./Header";
+import Footer from "./Footer";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const location = useLocation().pathname;
 
   return (
     <>
-      {location === '/login' ? (
+      {location === "/login" || location === "/register" ? (
         <>{children}</>
       ) : (
         <>
