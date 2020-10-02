@@ -2,36 +2,13 @@
 @import '../globales.scss';
 @import '../vars.scss';
 
-.cardPrice {
-  min-height: 100vh;
-  background: $color-grey-light;
-}
-
-.cardPrice__title {
-  text-align: center;
-  font-family: $font-primary;
-  margin: 1em 0;
-}
-
-.link__container {
-  display: inline-block;
-  margin: 1em 0 0 1em;
-}
-
-.link {
-  color: $color-black;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: $font-primary;
-  &__button--regresar {
-    display: flex;
-    align-items: center;
-    & img {
-      width: 40px;
-      margin-right: 5px;
-    }
-  }
-}
+// .CardPriceContainer {
+//   .cardPrice__title {
+//     text-align: center;
+//     font-family: $font-primary;
+//     margin: 1em 0;
+//   }
+// }
 
 .card__container {
   display: grid;
@@ -59,12 +36,10 @@
 }
 
 .card__details {
-  overflow-y: scroll;
   grid-column: 3 / 7;
-  height: 150px;
-  &--title,
-  &--description {
+  &--title {
     font-size: 1.5em;
+    text-align: center;
   }
 }
 
@@ -93,9 +68,8 @@
 }
 
 @media (max-width: 1322px) {
-  .card__details--title,
-  .card__details--description {
-    font-size: 1.2em;
+  .card__details--title {
+    font-size: 1.3em;
   }
 
   .card__market {
@@ -136,6 +110,9 @@
   .card__button {
     grid-column: 6 / span 2;
   }
+  .card__details--title {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 832px) {
@@ -170,12 +147,15 @@
     grid-column: initial;
     grid-row: 5;
     max-width: 100%;
-    margin-top: 1em;
+    margin: 1em 0;
   }
 }
 
 @media (max-width: 480px) {
   .card__container {
     padding: 1em 0.3em;
+  }
+  .card__details--title {
+    font-size: 1.3em;
   }
 }
