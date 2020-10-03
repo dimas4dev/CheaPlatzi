@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import "../globales.scss";
+@import "../vars.scss";
+.card__container {
+    grid-template-columns: repeat(auto-fill, minmax(110px, auto));
+    border: 1px solid $color-grey-light;
+    box-shadow: 0px 0px 1px 1px $color-grey-light;
+    margin: auto;
+    border-radius: 5px;
+    font-family: $font-primary;
+    width: 90%;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__image {}
+
+.card__image img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.card__details {
+    width: 30%;
+    &--title {
+        font-size: 1.3em;
+        text-align: left;
+        font-weight: lighter;
+    }
+}
+
+.card__market img {
+    width: 100px;
+    height: auto;
+    margin: auto;
+}
+
+.card__price {
+    font-size: 2em;
+    color: $color-tertiary;
+    font-weight: 600;
+}
+
+.card__button {
+    font-size: 1.5em;
+    &--link {
+        padding: 10px;
+        border-radius: 5px;
+        background: $color-main;
+        color: $color-grey-light;
+        text-decoration: none;
+    }
+    &--link:hover {
+        background: $color-tertiary;
+        color: $color-white;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 767px) {
+    .card__container {
+        display: inherit;
+        list-style: none;
+        text-align: center;
+        &__img {
+            &-logo img {
+                height: auto;
+                width: 40%;
+                margin: 0;
+            }
+        }
+    }
+    .card__details {
+        width: 100%;
+        &--title {
+            text-align: center;
+        }
+    }
+    .card__button {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        display: inherit;
+        padding: 30px 0;
+        text-align: center;
+        margin: 0 10px;
+        &img {
+            &-logo img {
+                height: auto;
+                width: 60%;
+                margin: 0;
+            }
+        }
+        .separator {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        display: inherit;
+        padding: 50px 0;
+        text-align: center;
+        margin: 0 10px;
+    }
+     ::placeholder {
+        font-size: 1.1em;
+    }
+}
