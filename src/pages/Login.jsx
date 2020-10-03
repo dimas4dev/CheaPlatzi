@@ -35,7 +35,8 @@ const Login = () => {
           </span>
           <button>Iniciar Sesion</button>
           <p className="Form__Redirection">
-            Si aún no te has registrado, ingresa <a href="/register">aquí</a>
+            Si aún no te has registrado, ingresa
+            <Link to="/register">aquí</Link>
           </p>
         </form>
       </article>

@@ -1,148 +1,154 @@
-@import "../vars.scss";
+@import '../vars.scss';
+
 body {
-    font-size: $fontSize;
-    font-family: $font-primary;
+  font-size: $fontSize;
+  font-family: $font-primary;
 }
 
 .Login {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
 .Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+  font-size: 1.2em;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  place-content: center;
+  &__Logo {
+    border-right: 1px solid rgba(111, 117, 182, 0.5);
+    width: 500px;
+    height: 327px;
+    text-align: center;
+    img {
+      width: 60%;
+      height: 100%;
+      border: none;
+    }
+  }
+  .Form {
     display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
-    font-size: 1.2em;
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
-    place-content: center;
-    &__Logo {
-        border-right: 1px solid rgba(111, 117, 182, 0.5);
-        width: 500px;
-        height: 327px;
-        text-align: center;
-        img {
-            width: 60%;
-            height: 100%;
-        }
+    flex-direction: column;
+    gap: 1.5em;
+    & h2,
+    h3 {
+      color: $color-white;
+      text-align: center;
+      font-weight: 600;
     }
-    .Form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5em;
-        margin: 80px;
-        & h2,
-        h3 {
-            color: $color-white;
-            text-align: center;
-            font-weight: 600;
-        }
-        &__Input {
-            font-size: 1em;
-            max-width: 400px;
-            height: 40px;
-            border: 1px solid rgba(111, 117, 182, 0.5);
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            box-shadow: none;
-            padding-left: 10px;
-            background-color: transparent;
-            outline: none;
-            color: $color-white;
-        }
-        &__Links {
-            color: $color-white;
-            // &--space {
-            //   display: inherit;
-            //   margin-right: 10px;
-            // }
-            & label,
-            & a {
-                font-size: 0.9em;
-            }
-            & a {
-                margin-left: 30px;
-                color: $color-white;
-            }
-            & input {
-                margin-right: 5px;
-            }
-        }
-        &__Redirection {
-            color: $color-white;
-            text-align: center;
-            a {
-                color: $color-tertiary;
-            }
-            &:hover a {
-                color: #bdd5eb;
-                transition: 0.5s;
-            }
-        }
-        button {
-            max-width: 400px;
-            height: 40px;
-            background-color: $color-tertiary;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 5px;
-            border: none;
-            color: $color-white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #55baa3;
-            transition: 1s;
-        }
+    &__Input {
+      font-size: 1em;
+      max-width: 400px;
+      height: 40px;
+      border: 1px solid rgba(111, 117, 182, 0.5);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      box-shadow: none;
+      padding-left: 10px;
+      background-color: transparent;
+      outline: none;
+      color: $color-white;
     }
+    &__Links {
+      color: $color-white;
+      // &--space {
+      //   display: inherit;
+      //   margin-right: 10px;
+      // }
+      & label,
+      & a {
+        font-size: 0.9em;
+      }
+      & a {
+        margin-left: 30px;
+        color: $color-white;
+      }
+      & input {
+        margin-right: 5px;
+      }
+    }
+    &__Redirection {
+      color: $color-white;
+      text-align: center;
+      a {
+        color: $color-tertiary;
+      }
+      &:hover a {
+        color: #bdd5eb;
+        transition: 0.5s;
+      }
+    }
+    button {
+      max-width: 400px;
+      height: 40px;
+      background-color: $color-tertiary;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 5px;
+      border: none;
+      color: $color-white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #55baa3;
+      transition: 1s;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
-    .Container {
-        grid-template-columns: repeat(auto-fill, minmax(450px, auto));
-    }
+  .Container {
+    grid-template-columns: repeat(auto-fill, minmax(450px, auto));
+  }
 }
 
+@media (max-width: 900px) {
+  .Container__Logo {
+    width: 300px;
+    height: 200px;
+    border: none;
+    & img {
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 768px) {
-    .Container__Logo {
-        width: 300px;
-        height: 200px;
-        border: none;
-    }
-    .Container .Form {
-        margin-bottom: 2em;
-    }
+  .Container .Form {
+    margin-bottom: 2em;
+  }
 }
 
 @media (max-width: 425px) {
-    .Container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 90%));
-    }
-    .Container__Logo {
-        width: 80%;
-    }
-    .Container .Form {
-        width: 100%;
-    }
-    .Container .Form__Links a {
-        display: flex;
-        justify-content: center;
-        margin: 1em 0 0 0;
-    }
+  .Container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 90%));
+  }
+  .Container__Logo {
+    width: 80%;
+  }
+  .Container .Form {
+    width: 100%;
+  }
+  .Container .Form__Links a {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0 0;
+  }
 }
 
 @media (max-width: 320px) {
-    .Container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 80%));
-    }
-    .Container .Form__Input {
-        font-size: 0.8em;
-    }
-    .Container .Form h2 {
-        font-size: 1.2em;
-    }
+  .Container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 80%));
+  }
+  .Container .Form__Input {
+    font-size: 0.8em;
+  }
+  .Container .Form h2 {
+    font-size: 1.2em;
+  }
 }
