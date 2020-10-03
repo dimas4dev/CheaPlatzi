@@ -1,21 +1,21 @@
-@import "../vars.scss";
+@import '../vars.scss';
 .button {
-    border: none;
-    border-radius: 5px;
-    padding: 9px 23px;
-    font-size: 18px;
-    font-weight: 700;
-    color: $color-black;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 23px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-black;
 }
 
 .button--register {
-    width: 350px;
-    border: none;
-    border-radius: 5px;
-    padding: 9px 23px;
-    font-size: 35px;
-    font-weight: 700;
-    color: $color-black;
+  width: 350px;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 23px;
+  font-size: 35px;
+  font-weight: 700;
+  color: $color-black;
 }
 
 .button:focus,
@@ -23,9 +23,7 @@
 .button--home:focus,
 .button--popular:focus,
 .button--register:focus {
-    outline: 0.2em solid #000;
-    outline-offset: 0.2cm;
-    outline: none;
+  outline: 0.2em solid #000;
 }
 
 .button,
@@ -33,65 +31,66 @@
 .button--home,
 .button--popular,
 .button--register {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .button--search {
-    border: 1px solid $color-tertiary;
-    border-radius: 0 10px 10px 0;
-    padding: 9px 23px;
-    font-weight: 700;
-    color: $color-black;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 9px 23px;
+  font-weight: 700;
+  color: $color-black;
+  font-size: 18px;
 }
 
 .button--home {
-    border: solid 1px $color-black;
-    border-radius: 0 10px 10px 0;
-    width: 300px;
-    padding: 9px 23px;
-    background-color: $color-main;
-    font-size: 30px;
-    font-weight: 700;
-    color: $color-white;
+  border: solid 1px $color-black;
+  border-radius: 0 10px 10px 0;
+  width: 300px;
+  padding: 9px 23px;
+  background-color: $color-main;
+  font-size: 30px;
+  font-weight: 700;
+  color: $color-white;
 }
 
 .button--popular {
-    border: solid 1px $color-main;
-    width: 100%;
-    padding: 9px 23px;
-    background-color: $color-main;
-    font-size: 20px;
-    font-weight: 700;
-    color: $color-white;
-    &:hover {
-        background-color: #55baa3;
-        transition: 1s;
-        border-color: #55baa3;
-    }
+  border: solid 1px $color-main;
+  width: 100%;
+  padding: 9px 23px;
+  background-color: $color-main;
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-white;
+  &:hover {
+    background-color: #55baa3;
+    transition: 1s;
+    border-color: #55baa3;
+  }
 }
 
 .button--space {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .button--yellow {
-    background-color: $color-tertiary;
-    color: $color-white;
+  background-color: $color-tertiary;
+  color: $color-black-secondary;
 }
 
 .button--yellow:hover {
-    background-color: #55baa3;
-    transition: 1s;
+  background-color: #55baa3;
+  transition: 1s;
 }
 
 @media screen and (max-width: 453px) {
-    .button--space {
-        margin: 0 1px;
-    }
+  .button--space {
+    margin: 0 1px;
+  }
 }
 
 @media screen and (max-width: 453px) {
-    .button--search {
-        font-size: 0.8em;
-    }
+  .button--search {
+    font-size: 0.8em;
+  }
 }

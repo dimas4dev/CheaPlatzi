@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 
-import "../assets/styles/components/CardHome.scss";
+import '../assets/styles/components/CardHome.scss';
 
 const CardHome = ({
   linkImage,
@@ -10,23 +10,23 @@ const CardHome = ({
   productDescription,
 }) => {
   return (
-    <article className="card--home">
+    <article className='card--home'>
       <figure>
-        <img src={linkImage} alt="producto" />
+        <img src={linkImage} alt='producto' />
       </figure>
-      <div className="card--detail">
-        <div className="card--detail-title">
-          <h5>{productoName}</h5>
-          <hr className="divider__product" />
+      <div className='card--detail'>
+        <div className='card--detail-title'>
+          <h1>{productoName}</h1>
+          <hr className='divider__product' />
         </div>
-        <div className="card--detail-subtitle">
+        <div className='card--detail-subtitle'>
           <p>{productBrand}</p>
         </div>
-        <div className="card--detail-description">
+        <div className='card--detail-description'>
           <p>{productDescription}</p>
         </div>
       </div>
-      <Button text="Comparar" classnames="button--popular" />
+      <Button text='Comparar' classnames='button--popular' />
     </article>
   );
 };

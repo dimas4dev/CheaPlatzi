@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, {useState} from 'react';
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
 
-import { getProducts } from '../redux/actions/productsActions';
+import {getProducts} from '../redux/actions/productsActions';
 
 import Button from './Button';
 
 import '../assets/styles/components/Search.scss';
 
 const Search = (props) => {
-
-  const { guide, action, styles, inputStyles } = props;
+  const {guide, action, styles, inputStyles} = props;
 
   const [form, setValues] = useState({
     name: '',
@@ -30,18 +29,14 @@ const Search = (props) => {
   };
 
   const handleClick = async () => {
-
     await props.getProducts(keyWord);
     props.history.push('/results');
-
   };
 
   console.log(props.productsSearch);
 
   return (
-    <form
-      onSubmit={handleSubmit}
-    >
+    <form onSubmit={handleSubmit}>
       <input
         type='search'
         onChange={handleInput}
@@ -49,17 +44,15 @@ const Search = (props) => {
         className={inputStyles}
         placeholder={guide}
         value={form.name}
+        id='searchBar'
       />
-      <Button
-        text={action}
-        classnames={styles}
-        handleClick={handleClick}
-      />
+      <Button text={action} classnames={styles} handleClick={handleClick} />
+      {/* </label> */}
     </form>
   );
 };
 
-const mapStateToProps = ({ productsReducer }) => productsReducer;
+const mapStateToProps = ({productsReducer}) => productsReducer;
 
 const mapDispatchToProps = {
   getProducts,
