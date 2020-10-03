@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import * as productsActions from '../redux/actions/productsActions';
+import * as productsActions from "../redux/actions/productsActions";
 
 import Search from "../components/Search";
 import CardFunctions from "../components/CardFunctions";
@@ -56,7 +56,9 @@ const Home = (props) => {
         <hr className="divider" />
       </div>
       <div className="divider__empty"></div>
+
       <ListCards />
+
       <div className="divider__empty"></div>
       <div className="home__title-section">
         <h2 className="home__choose">Nosotros comparamos, tú eliges</h2>

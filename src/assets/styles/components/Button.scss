@@ -37,10 +37,9 @@
 }
 
 .button--search {
-    border: none;
+    border: 1px solid $color-tertiary;
     border-radius: 0 10px 10px 0;
     padding: 9px 23px;
-    font-size: 18px;
     font-weight: 700;
     color: $color-black;
 }
@@ -64,6 +63,11 @@
     font-size: 20px;
     font-weight: 700;
     color: $color-white;
+    &:hover {
+        background-color: #55baa3;
+        transition: 1s;
+        border-color: #55baa3;
+    }
 }
 
 .button--space {
@@ -78,4 +82,16 @@
 .button--yellow:hover {
     background-color: #55baa3;
     transition: 1s;
+}
+
+@media screen and (max-width: 453px) {
+    .button--space {
+        margin: 0 1px;
+    }
+}
+
+@media screen and (max-width: 453px) {
+    .button--search {
+        font-size: 0.8em;
+    }
 }

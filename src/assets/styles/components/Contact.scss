@@ -1,18 +1,14 @@
-@import '../vars.scss';
-
+@import "../vars.scss";
 form {
-  .contact__input {
-    border: none;
-    border-radius: 10px 0 0 10px;
-    padding: 9px 23px;
-    font-size: 18px;
-    font-weight: 700;
-    color: $color-black;
-    text-align: center;
-  }
-
-  .contact__input:focus {
-    outline: none;
-  }
-
+    .contact__input {
+        border: none;
+        border-radius: 10px 0 0 10px;
+        padding: 9px 23px;
+        font-weight: 700;
+        color: $color-black;
+        text-align: center;
+    }
+    .contact__input:focus {
+        outline: none;
+    }
 }
