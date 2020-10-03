@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from 'react-redux';
+
+import * as productsActions from '../redux/actions/productsActions';
 
 import Search from "../components/Search";
 import CardFunctions from "../components/CardFunctions";
@@ -70,4 +73,8 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+const mapStateToProps = (reducers) => {
+  return reducers.productsReducer;
+};
+
+export default connect(mapStateToProps, productsActions)(Home);
