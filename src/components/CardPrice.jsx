@@ -26,7 +26,7 @@ const CardPrice = ({ item }) => {
         <p>{item.price}</p>
       </div>
       <div className='card__button'>
-        <a href={item.url} className='card__button--link'>
+        <a target='_blank' href={item.url} className='card__button--link'>
           Comprar
         </a>
       </div>
