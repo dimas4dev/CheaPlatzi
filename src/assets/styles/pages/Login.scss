@@ -56,13 +56,12 @@ body {
         }
         &__Links {
             color: $color-white;
-            & label,
-            & a {
+            & label {}
+            & p {
                 font-size: 0.9em;
-            }
-            & a {
-                margin-left: 30px;
+                margin: 20px 0;
                 color: $color-white;
+                text-align: left;
             }
             & input {
                 margin-right: 5px;

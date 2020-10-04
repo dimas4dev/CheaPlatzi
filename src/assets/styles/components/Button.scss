@@ -42,6 +42,7 @@
     padding: 9px 23px;
     font-weight: 700;
     color: $color-black;
+    font-size: 18px;
 }
 
 .button--home {
@@ -84,6 +85,12 @@
     transition: 1s;
 }
 
+@media screen and (max-width: 650px) {
+    .button--search {
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 453px) {
     .button--space {
         margin: 0 1px;
@@ -92,6 +99,7 @@
 
 @media screen and (max-width: 453px) {
     .button--search {
-        font-size: 0.8em;
+        // font-size: 0.8em;
+        // margin: 0 1px;
     }
 }

@@ -2,12 +2,14 @@ import React from "react";
 import Button from "./Button";
 
 import "../assets/styles/components/CardHome.scss";
+import { Link } from "react-router-dom";
 
 const CardHome = ({
   linkImage,
   productoName,
   productBrand,
   productDescription,
+  productLink,
 }) => {
   return (
     <article className="card--home">
@@ -26,7 +28,9 @@ const CardHome = ({
           <p>{productDescription}</p>
         </div>
       </div>
-      <Button text="Comparar" classnames="button--popular" />
+      <Link to={productLink}>
+        <Button text="Comparar" classnames="button--popular" />
+      </Link>
     </article>
   );
 };

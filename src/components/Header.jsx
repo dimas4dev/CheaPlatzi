@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
-
 import Button from "./Button";
-import Search from "./Search";
 
 import Logo from "../assets/images/logo.svg";
 import avatar from "../assets/images/avatar.png";
@@ -37,12 +35,6 @@ const Header = ({ location }) => {
       )}
       {location.pathname !== "/" && (
         <>
-          <Search
-            inputStyles="search__input"
-            guide="¿Qué artículo buscas?"
-            action="Buscar"
-            styles="button--search button--yellow"
-          />
           <div className="header__search--avatar">
             <figure>
               <img className="avatar" src={avatar} alt="Avatar de usuario" />
