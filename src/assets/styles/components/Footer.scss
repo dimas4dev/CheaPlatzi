@@ -1,4 +1,4 @@
-@import '../vars.scss';
+@import "../vars.scss";
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -9,7 +9,6 @@
     padding: 20px 60px;
     &__contact {
         p {
-            // margin-bottom: 25px;
             color: $color-white;
             font-size: 20px;
             width: 50%;
@@ -25,14 +24,10 @@
     }
 }
 
-
-
-
 @media (max-width: 900px) {
     .footer {
         padding: 20px 30px;
     }
-
     .footer__social figure {
         margin-left: 18px;
     }
@@ -45,11 +40,9 @@
         align-items: center;
         text-align: center;
     }
-
     .footer__social {
         margin: 2em 0 1em 0;
     }
-
     .footer__contact {
         p {
             text-align: center;
@@ -62,7 +55,6 @@
     .footer {
         padding: 1em 1em;
     }
-
     .footer__contact {
         p {
             text-align: center;

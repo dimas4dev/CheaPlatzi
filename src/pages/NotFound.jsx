@@ -14,11 +14,11 @@ const NotFound = () => {
       </h2>
       <img
         src="https://www.alfabetajuega.com/wp-content/uploads/2019/09/pikachu-pokemon-triste-ojos.jpg"
-        alt=""
+        alt="pikachu"
         className="notFound__image"
       />
       <Link to="/" className="notFound__button">
-        Home
+        Inicio
       </Link>
     </section>
   );

@@ -20,14 +20,14 @@ const Header = ({ location }) => {
           <Link to="/login">
             <Button
               className="button__space"
-              text="Login"
+              text="Acceder"
               classnames="button"
             />
           </Link>
           <Link to="/register">
             <Button
               className="button__space"
-              text="Sign up"
+              text="Regístro"
               classnames="button button--space button--yellow"
             />
           </Link>
