@@ -1,12 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import Button from './Button';
 
-<<<<<<< HEAD
 import "../assets/styles/components/CardHome.scss";
-import { Link } from "react-router-dom";
-=======
-import '../assets/styles/components/CardHome.scss';
->>>>>>> 7f81fff9e2c5e4c45925dd844551adbe7ca6570b
 
 const CardHome = ({
   linkImage,
