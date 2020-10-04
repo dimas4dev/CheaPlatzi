@@ -1,4 +1,4 @@
-@import '../vars.scss';
+@import "../vars.scss";
 .button {
     border: none;
     border-radius: 5px;
@@ -6,6 +6,12 @@
     font-size: 18px;
     font-weight: 700;
     color: $color-black;
+}
+
+.button:hover {
+    background-color: $color-tertiary;
+    color: white;
+    transition: 1s;
 }
 
 .button--register {
@@ -23,7 +29,7 @@
 .button--home:focus,
 .button--popular:focus,
 .button--register:focus {
-    outline: 0.1em solid #000;
+    outline: none;
 }
 
 .button,
@@ -81,7 +87,7 @@
 
 .button--yellow {
     background-color: $color-tertiary;
-    color: $color-black-secondary;
+    color: $color-white;
 }
 
 .button--yellow:hover {
@@ -102,8 +108,5 @@
 }
 
 @media screen and (max-width: 453px) {
-    .button--search {
-        // font-size: 0.8em;
-        // margin: 0 1px;
-    }
+    .button--search {}
 }

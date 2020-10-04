@@ -1,15 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import CardPrice from './CardPrice';
-import '../assets/styles/components/CardPrice.scss';
+import CardPrice from "./CardPrice";
+import "../assets/styles/components/CardPrice.scss";
 
 const ListPrices = ({ productsSearch }) => {
   return (
-    <section className='cardPrice'>
-
+    <section className="cardPrice">
       <ul>
         {productsSearch.map((item) => {
           return (

@@ -12,7 +12,7 @@ const ListCards = () => {
         productoName="Play Station 4"
         productBrand="Sony"
         productDescription="Has llegado al sitio correcto. Estos exclusivos juegos te llevarán a viajes increíbles,desde los propuestos por desarrolladores independientes aclamados por la crítica hasta los éxitos galardonados de la AAA."
-        productLink="/scrap/?search=play%20station%204"
+        productLink="https://vsbuy.xyz/scrap/?search=play%20station%204"
       />
       <CardHome
         linkImage="https://compass-ssl.xbox.com/assets/f0/85/f085c120-d3d5-4424-8b70-eb25deaa326e.png?n=XBX_A-BuyBoxBGImage01-D.png"

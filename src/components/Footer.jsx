@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer__contact">
         <div>
           <p>
-            VsBuy s una plataforma de comparación de precios hecha para
+            VsBuy es una plataforma de comparación de precios hecha para
             facilitarte la búsqueda de artículos en la web
           </p>
         </div>
