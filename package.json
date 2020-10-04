@@ -4,6 +4,7 @@
   "description": "Web application to make optimized purchases in multiple supermarkets",
   "main": "index.js",
   "scripts": {
+    "vercel-build": "npm run build",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development"
   },
