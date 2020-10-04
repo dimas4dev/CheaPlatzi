@@ -47,7 +47,6 @@ const Search = (props) => {
         id='searchBar'
       />
       <Button text={action} classnames={styles} handleClick={handleClick} />
-      {/* </label> */}
     </form>
   );
 };

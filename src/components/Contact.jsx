@@ -10,9 +10,6 @@ const Contact = ({guide, action, styles}) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      {/* <label htmlFor='contact'>
-        Contáctanos y resolveremos todas tus inquietudes
-      </label> */}
       <input
         className='contact__input'
         placeholder={guide}
