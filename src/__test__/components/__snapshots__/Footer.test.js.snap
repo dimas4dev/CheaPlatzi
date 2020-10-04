@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Snapshot Comprobar la UI del componente Footer 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__contact"
+  >
+    <label
+      className="footer__contact--label"
+      htmlFor="contact"
+    >
+      Contáctanos y resolveremos todas tus inquietudes
+    </label>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="contact__input"
+        id="contact"
+        placeholder="Tu email"
+        type="text"
+      />
+      <button
+        className="button--search button--yellow"
+        type="search"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+  <div
+    className="footer__social"
+  >
+    <figure>
+      <img
+        alt="link to Instagram"
+        src={Object {}}
+      />
+    </figure>
+    <figure>
+      <img
+        alt="link to facebook"
+        src={Object {}}
+      />
+    </figure>
+  </div>
+</footer>
+`;

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer__contact'>
-        <label htmlFor='contact'>
+        <label htmlFor='contact' className='footer__contact--label'>
           Contáctanos y resolveremos todas tus inquietudes
         </label>
         <Contact

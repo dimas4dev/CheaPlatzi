@@ -23,7 +23,7 @@
 .button--home:focus,
 .button--popular:focus,
 .button--register:focus {
-  outline: 0.2em solid #000;
+  outline: 0.1em solid #000;
 }
 
 .button,
@@ -44,7 +44,7 @@
 }
 
 .button--home {
-  border: solid 1px $color-black;
+  border: none;
   border-radius: 0 10px 10px 0;
   width: 300px;
   padding: 9px 23px;

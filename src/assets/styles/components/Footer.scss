@@ -12,7 +12,7 @@
   );
   padding: 20px 60px;
   &__contact {
-    label {
+    &--label {
       line-height: 2em;
       color: $color-white;
       font-size: 20px;
