@@ -1,7 +1,32 @@
 import React from "react";
 import "../assets/styles/components/CardPrice.scss";
 
+import amazon from "../assets/images/amazon.png";
+import mercadoLibre from "../assets/images/mercado_libre.png";
+import eBay from "../assets/images/ebay.png";
+import bestBuy from "../assets/images/best_buy.png";
+
 const CardPrice = ({ item }) => {
+
+  const switchMarker = (id) => {
+    switch (id) {
+      case 1:
+        return amazon;
+
+      case 2:
+        return mercadoLibre;
+
+      case 3:
+        return eBay;
+
+      case 4:
+        return bestBuy;
+
+      default:
+        console.log('Quedó mal el switch');
+    }
+  };
+
   return (
     <article className="card__container">
       <div className="card__image">
@@ -12,7 +37,7 @@ const CardPrice = ({ item }) => {
       </div>
       <div className="card__market">
         <img
-          src="https://logos-marcas.com/wp-content/uploads/2020/04/Amazon-Logo.png"
+          src={switchMarker(item.store.id)}
           alt="imagen del E-comerce"
         />
       </div>

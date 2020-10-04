@@ -1,5 +1,5 @@
 
-const URL_API = 'https://murmuring-plains-72181.herokuapp.com';
+const URL_API = 'https://vsbuy.xyz';
 // eslint-disable-next-line import/prefer-default-export
 export const getProducts = (name) => async (dispatch) => {
   try {
@@ -8,7 +8,7 @@ export const getProducts = (name) => async (dispatch) => {
     const data = await response.json();
     dispatch({
       type: 'PRODUCTS_SEARCH',
-      payload: data,
+      payload: data.results,
     });
   } catch (error) {
     console.error('getProductsSearch -> err', error);
