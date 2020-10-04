@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "VsBuy",
+  "routes": [
+    {
+      "src": "(.*).js", "dest": "/$1.js"
+    },
+    {
+      "src": "(.*).json", "dest": "/$1.json"
+    }
+  ]
+}
