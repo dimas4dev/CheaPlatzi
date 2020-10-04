@@ -44,6 +44,7 @@ const Search = (props) => {
         className={inputStyles}
         placeholder={guide}
         value={form.name}
+        id="searchBar"
       />
       <Button text={action} classnames={styles} handleClick={handleClick} />
     </form>

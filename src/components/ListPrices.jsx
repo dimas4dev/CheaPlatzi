@@ -13,7 +13,7 @@ const ListPrices = ({ productsSearch }) => {
       <ul>
         {productsSearch.map((item) => {
           return (
-            <li key={item.index}>
+            <li key={item.id}>
               <CardPrice item={item} />
             </li>
           );

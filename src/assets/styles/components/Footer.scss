@@ -1,4 +1,4 @@
-@import "../vars.scss";
+@import '../vars.scss';
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -15,25 +15,28 @@
             width: 50%;
         }
     }
-    &__social {
-        display: flex;
-        align-items: center;
-        figure {
-            margin-left: 28px;
-            cursor: pointer;
-        }
+}
+
+&__social {
+    display: flex;
+    align-items: center;
+    figure {
+        margin-left: 28px;
+        cursor: pointer;
     }
 }
 
+
+}
 @media (max-width: 900px) {
     .footer {
         padding: 20px 30px;
     }
+    
     .footer__social figure {
         margin-left: 18px;
     }
 }
-
 @media (max-width: 768px) {
     .footer {
         padding: 1em 2em;
@@ -41,9 +44,11 @@
         align-items: center;
         text-align: center;
     }
+    
     .footer__social {
         margin: 2em 0 1em 0;
     }
+    
     .footer__contact {
         p {
             text-align: center;
@@ -51,11 +56,11 @@
         }
     }
 }
-
 @media (max-width: 425px) {
     .footer {
         padding: 1em 1em;
     }
+    
     .footer__contact {
         p {
             text-align: center;
