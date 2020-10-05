@@ -24,7 +24,7 @@ const ListCards = () => {
       />
       <CardHome
         linkImage="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-p43s-hero.png?context=bWFzdGVyfHJvb3R8MzIxMTkzfGltYWdlL3BuZ3xoOGMvaDUzLzEwMDM5NzE4NTQzMzkwLnBuZ3w1NTE4NWUyNzc0NWQ0MWExNmY5ZTcyYTdiYmZiMTkyNjJhNDdjNDUwYTQzMDBlMGQzM2Q4M2YwZThlZWNmZTc2"
-        productoName="Lenovo ThinkPad P43s"
+        productoName="Computador Lenovo ThinkPad P43s"
         productBrand="Lenovo"
         productDescription="Con un grosor de tan solo 17,9 mm y un peso a partir de 1,47 kg, la ThinkPad P43s es una de las workstations más pequeñas y livianas de Lenovo"
         productLink="/scrap/?search=play%20station%204"

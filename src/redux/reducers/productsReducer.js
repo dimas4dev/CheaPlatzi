@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
-  productsSearch: '',
+  productsSearch: [],
+  productsPopular: [],
   loading: false,
   error: null,
 };
@@ -10,6 +11,13 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         productsSearch: action.payload,
+        loading: false,
+        error: null,
+      };
+    case 'PRODUCT_POPULAR':
+      return {
+        ...state,
+        productsPopular: action.payload,
         loading: false,
         error: null,
       };
