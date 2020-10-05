@@ -6,7 +6,15 @@ import Logo from "../assets/images/logo.svg";
 import avatar from "../assets/images/avatar.png";
 import "../assets/styles/components/Header.scss";
 
-const Header = ({ location }) => {
+const Header = ({ location, history }) => {
+  const usuario = localStorage.getItem("lastname");
+
+  const handleChange = () => {
+    localStorage.removeItem("name");
+    localStorage.removeItem("usuario");
+    localStorage.removeItem("lastname");
+    history.push("/login");
+  };
   return (
     <header className="header">
       <Link className="header__logo" to="/">
@@ -36,9 +44,13 @@ const Header = ({ location }) => {
       {location.pathname !== "/" && (
         <>
           <div className="header__search--avatar">
-            <figure>
-              <img className="avatar" src={avatar} alt="Avatar de usuario" />
-            </figure>
+            <span style={{ color: "white" }}>Bienvenido {usuario}!</span>
+            <button
+              className="button button--space button--yellow"
+              onClick={handleChange}
+            >
+              Cerrar Sesion
+            </button>
           </div>
         </>
       )}

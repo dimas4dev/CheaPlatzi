@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/pages/Login.scss";
 import Logo from "../assets/images/logo.svg";
 import backgroundLogin from "../assets/images/background-login.png";
 import URL_GET from "../config/get.js";
+import { withRouter } from "react-router-dom";
 
-const Login = () => {
-  document.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    let mail = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+const Login = (props) => {
+  const [datos, setDatos] = useState({
+    email: "",
+    password: "",
+  });
 
-    function resetForm() {
-      document.getElementById("loginForm").reset();
-    }
+  const handleInputChange = (event) => {
+    setDatos({
+      ...datos,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     let options = {
       method: "POST",
@@ -21,19 +28,26 @@ const Login = () => {
         "Content-Type": "application/json; charset=utf-8",
       },
       body: JSON.stringify({
-        email: mail,
-        password: password,
+        email: datos.email,
+        password: datos.password,
       }),
     };
 
     let res = await fetch(URL_GET, options);
     if (res.status === 201) {
-      location.href = "/";
-      resetForm();
+      let res = await fetch(URL_GET, options).then((respuesta) =>
+        respuesta.json().then((respuesta1) => {
+          localStorage.getItem("name");
+          localStorage.getItem("lastname");
+          localStorage.setItem("name", respuesta1.user.first_name);
+          localStorage.setItem("lastname", respuesta1.user.last_name);
+          props.history.push("/Main");
+        })
+      );
     } else {
       alert("Problemas para acceder a tu usuario");
     }
-  });
+  };
 
   function forgotPass() {
     alert(
@@ -52,19 +66,23 @@ const Login = () => {
             <img src={Logo} alt="Logo" />
           </figure>
         </Link>
-        <form className="Form" action="" id="loginForm">
+        <form className="Form" action="" id="loginForm" onSubmit={handleSubmit}>
           <h3>Inicia Sesión</h3>
           <input
             className="Form__Input"
             type="text"
             placeholder="Correo Electrónico"
             id="email"
+            onChange={handleInputChange}
+            name="email"
           />
           <input
             className="Form__Input"
             type="password"
             placeholder="Contraseña"
             id="password"
+            onChange={handleInputChange}
+            name="password"
           />
           <span className="Form__Links">
             <label htmlFor="">
@@ -75,7 +93,7 @@ const Login = () => {
               ¿Olvidaste tu contraseña?
             </p>
           </span>
-          <button>Iniciar Sesion</button>
+          <button type="submit">Iniciar Sesion</button>
           <p className="Form__Redirection">
             Si aún no te has registrado, ingresa{" "}
             <Link to="/register">aquí</Link>
@@ -86,4 +104,4 @@ const Login = () => {
     </section>
   );
 };
-export default Login;
+export default withRouter(Login);
