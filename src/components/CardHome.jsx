@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { getProducts } from "../redux/actions/productsActions";
 
 import Button from "./Button";
 
@@ -10,8 +12,15 @@ const CardHome = ({
   productoName,
   productBrand,
   productDescription,
-  productLink,
+  getProducts,
+  history,
 }) => {
+
+  const handleClick = async () => {
+    await getProducts(productoName.slice(0, 4));
+    history.push("/results");
+  };
+
   return (
     <article className="card--home">
       <figure>
@@ -29,11 +38,17 @@ const CardHome = ({
           <p>{productDescription}</p>
         </div>
       </div>
-      <Link to={productLink} target="_blank">
-        <Button text="Comparar" classnames="button--popular" />
-      </Link>
+
+      <Button handleClick={handleClick} text="Comparar" classnames="button--popular" />
+
     </article>
   );
 };
 
-export default CardHome;
+const mapStateToProps = ({ productsReducer }) => productsReducer;
+
+const mapDispatchToProps = {
+  getProducts,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardHome));

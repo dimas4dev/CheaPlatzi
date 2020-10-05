@@ -14,3 +14,16 @@ export const getProducts = (name) => async (dispatch) => {
     console.error('getProductsSearch -> err', error);
   }
 };
+
+export const getPopular = () => async (dispatch) => {
+  try {
+    const response = await fetch(`${URL_API}/scrap/list/favorites/`);
+    const data = await response.json();
+    dispatch({
+      type: 'PRODUCT_POPULAR',
+      payload: data,
+    });
+  } catch (error) {
+    console.error('getProductsPopular -> err', error);
+  }
+};
