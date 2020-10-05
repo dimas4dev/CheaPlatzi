@@ -12,14 +12,15 @@ import yellow from "../assets/images/yellow.png";
 import dark from "../assets/images/dark.png";
 import blue from "../assets/images/blue.png";
 import "../assets/styles/pages/Home.scss";
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
   return (
     <main className="home">
       <div className="home__title-section">
-        <h2 className="home__tittle">
+        <label htmlFor="searchBar" className="home__tittle">
           Compara el precio de múltiples productos en un solo lugar
-        </h2>
+        </label>
         <hr className="divider" />
       </div>
       <div className="home__search">
@@ -66,10 +67,12 @@ const Home = (props) => {
         <div className="divider__empty"></div>
       </div>
       <div className="home__button--register">
-        <Button
-          text="Regístrate"
-          classnames="button--register button--yellow"
-        />
+        <Link to="/register">
+          <Button
+            text="Regístrate"
+            classnames="button--register button--yellow"
+          />
+        </Link>
       </div>
     </main>
   );

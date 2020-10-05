@@ -12,6 +12,7 @@ const ListCards = () => {
         productoName="Play Station 4"
         productBrand="Sony"
         productDescription="Has llegado al sitio correcto. Estos exclusivos juegos te llevarán a viajes increíbles,desde los propuestos por desarrolladores independientes aclamados por la crítica hasta los éxitos galardonados de la AAA."
+        productLink="https://vsbuy.xyz/scrap/?search=play%20station%204"
       />
       <CardHome
         linkImage="https://compass-ssl.xbox.com/assets/f0/85/f085c120-d3d5-4424-8b70-eb25deaa326e.png?n=XBX_A-BuyBoxBGImage01-D.png"
@@ -19,18 +20,21 @@ const ListCards = () => {
         productBrand="Microsoft"
         productDescription="Consola de nueva generación. Juegos de nueva generación.
         Embárcate en nuevas aventuras de la forma en que deben vivirse en Xbox Series X."
+        productLink="/scrap/?search=play%20station%204"
       />
       <CardHome
         linkImage="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-p43s-hero.png?context=bWFzdGVyfHJvb3R8MzIxMTkzfGltYWdlL3BuZ3xoOGMvaDUzLzEwMDM5NzE4NTQzMzkwLnBuZ3w1NTE4NWUyNzc0NWQ0MWExNmY5ZTcyYTdiYmZiMTkyNjJhNDdjNDUwYTQzMDBlMGQzM2Q4M2YwZThlZWNmZTc2"
-        productoName="Lenovo ThinkPad P43s"
+        productoName="Computador Lenovo ThinkPad P43s"
         productBrand="Lenovo"
         productDescription="Con un grosor de tan solo 17,9 mm y un peso a partir de 1,47 kg, la ThinkPad P43s es una de las workstations más pequeñas y livianas de Lenovo"
+        productLink="/scrap/?search=play%20station%204"
       />
       <CardHome
         linkImage="https://mxsonyb2c.vteximg.com.br/arquivos/ids/257874-370-370/5d02da5df552836db894cead8a68f5f3.jpg?v=637323405320470000"
         productoName="Audifonos Inhalámbricos"
         productBrand="Sony"
         productDescription="Los intuitivos e inteligentes audífonos WH-1000XM4 te ofrecen nuevas mejoras en la tecnología de noise cancelling líder del sector, una calidad de sonido excepcional."
+        productLink="/scrap/?search=play%20station%204"
       />
     </div>
   );

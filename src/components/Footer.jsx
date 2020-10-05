@@ -10,12 +10,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__contact">
-        <p>Contáctanos y resolveremos todas tus inquietudes</p>
-        <Contact
-          guide="Tu email"
-          action="Enviar"
-          styles="button--search button--yellow"
-        />
+        <div>
+          <p>
+            VsBuy es una plataforma de comparación de precios hecha para
+            facilitarte la búsqueda de artículos en la web
+          </p>
+        </div>
       </div>
       <div className="footer__social">
         <figure>

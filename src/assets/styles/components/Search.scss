@@ -1,13 +1,14 @@
 @import "../vars.scss";
 form {
     .search__input {
-        border: none;
+        border: 1px solid $color-tertiary;
         border-radius: 10px 0 0 10px;
         padding: 9px 23px;
         font-size: 18px;
         font-weight: 700;
         color: $color-black;
         text-align: center;
+        margin: auto;
     }
     .home__input {
         border: solid 0.1px $color-black;
@@ -22,5 +23,22 @@ form {
     .search__input:focus,
     .home__input:focus {
         outline: none;
+    }
+}
+
+.form__search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 650px) {
+    form {
+        .search__input {
+            font-size: 10px;
+            padding: 9px 20px;
+        }
+         ::placeholder {
+            font-size: 10px;
+        }
     }
 }

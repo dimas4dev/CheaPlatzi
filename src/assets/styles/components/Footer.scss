@@ -2,15 +2,16 @@
 .footer {
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     min-height: 90px;
     background: rgb(2, 0, 36);
     background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     padding: 20px 60px;
     &__contact {
         p {
-            margin-bottom: 25px;
             color: $color-white;
             font-size: 20px;
+            width: 50%;
         }
     }
     &__social {
@@ -42,18 +43,22 @@
     .footer__social {
         margin: 2em 0 1em 0;
     }
+    .footer__contact {
+        p {
+            text-align: center;
+            width: auto;
+        }
+    }
 }
 
 @media (max-width: 425px) {
     .footer {
         padding: 1em 1em;
     }
-    form .contact__input,
-    .button--search {
-        font-size: 0.8em;
-    }
-    .footer__social figure img {
-        width: 40px;
-        height: 40px;
+    .footer__contact {
+        p {
+            text-align: center;
+            width: auto;
+        }
     }
 }

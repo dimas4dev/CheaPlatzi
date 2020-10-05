@@ -8,6 +8,12 @@
     color: $color-black;
 }
 
+.button:hover {
+    background-color: $color-tertiary;
+    color: white;
+    transition: 1s;
+}
+
 .button--register {
     width: 350px;
     border: none;
@@ -23,8 +29,6 @@
 .button--home:focus,
 .button--popular:focus,
 .button--register:focus {
-    outline: 0.2em solid #000;
-    outline-offset: 0.2cm;
     outline: none;
 }
 
@@ -42,10 +46,17 @@
     padding: 9px 23px;
     font-weight: 700;
     color: $color-black;
+    font-size: 18px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 9px 23px;
+    font-weight: 700;
+    color: $color-black;
+    font-size: 18px;
 }
 
 .button--home {
-    border: solid 1px $color-black;
+    border: none;
     border-radius: 0 10px 10px 0;
     width: 300px;
     padding: 9px 23px;
@@ -84,6 +95,12 @@
     transition: 1s;
 }
 
+@media screen and (max-width: 650px) {
+    .button--search {
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 453px) {
     .button--space {
         margin: 0 1px;
@@ -91,7 +108,5 @@
 }
 
 @media screen and (max-width: 453px) {
-    .button--search {
-        font-size: 0.8em;
-    }
+    .button--search {}
 }

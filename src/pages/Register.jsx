@@ -2,11 +2,11 @@ import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import logo from "../assets/images/logo-bg-dark.png";
 import "../assets/styles/pages/Register.scss";
-import URL_POST from "../config/url.js";
+import URL_POST from "../config/post.js";
 import BackgroundRegister from "../assets/images/bg-linear.jpg";
 
 const Register = function () {
-  document.addEventListener("submit", (e) => {
+  document.addEventListener("submit", async (e) => {
     e.preventDefault();
     let alias = document.getElementById("nickname").value;
     let name = document.getElementById("username").value;
@@ -16,33 +16,34 @@ const Register = function () {
     let pass = document.getElementById("userpass").value;
     let passconf = document.getElementById("passconfirm").value;
 
-    try {
-      let options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: JSON.stringify({
-          username: alias,
-          first_name: name,
-          last_name: lastname,
-          phone_number: phone,
-          email: mail,
-          password: pass,
-          password_confirmation: passconf,
-        }),
-      };
+    function resetForm() {
+      document.getElementById("registerForm").reset();
+    }
 
-      // console.log(options.body);
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify({
+        username: alias,
+        first_name: name,
+        last_name: lastname,
+        phone_number: phone,
+        email: mail,
+        password: pass,
+        password_confirmation: passconf,
+      }),
+    };
+    let res = await fetch(URL_POST, options);
 
-      let res = fetch(URL_POST, options);
-      console.log(res);
-
+    if (res.status === 201) {
+      resetForm();
       document.getElementById(
         "message"
       ).innerHTML = `Inscripción Exitosa, has click <a href="/login">aquí</a> para ingresar`;
-    } catch (err) {
-      alert(message);
+    } else {
+      alert("Datos incorrectos para la creación de usuario");
     }
   });
   return (
@@ -71,6 +72,7 @@ const Register = function () {
               required=""
               autoComplete="off"
               name="formRegister"
+              id="registerForm"
             >
               <input
                 type="text"
@@ -122,7 +124,12 @@ const Register = function () {
                 required=""
               />
               <div className="form-links">
-                <input type="checkbox" required="" className="checkbox" />
+                <input
+                  type="checkbox"
+                  required=""
+                  className="checkbox"
+                  checked
+                />
                 <p className="form-register-text politic">
                   Acepta nuestra política de tratamiento de información
                 </p>

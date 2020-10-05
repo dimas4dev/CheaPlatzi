@@ -1,14 +1,20 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
-
 import Button from "./Button";
-import Search from "./Search";
 
 import Logo from "../assets/images/logo.svg";
 import avatar from "../assets/images/avatar.png";
 import "../assets/styles/components/Header.scss";
 
-const Header = ({ location }) => {
+const Header = ({ location, history }) => {
+  const usuario = localStorage.getItem("lastname");
+
+  const handleChange = () => {
+    localStorage.removeItem("name");
+    localStorage.removeItem("usuario");
+    localStorage.removeItem("lastname");
+    history.push("/login");
+  };
   return (
     <header className="header">
       <Link className="header__logo" to="/">
@@ -22,14 +28,14 @@ const Header = ({ location }) => {
           <Link to="/login">
             <Button
               className="button__space"
-              text="Login"
+              text="Acceder"
               classnames="button"
             />
           </Link>
           <Link to="/register">
             <Button
               className="button__space"
-              text="Sign up"
+              text="Regístro"
               classnames="button button--space button--yellow"
             />
           </Link>
@@ -37,16 +43,14 @@ const Header = ({ location }) => {
       )}
       {location.pathname !== "/" && (
         <>
-          <Search
-            inputStyles="search__input"
-            guide="¿Qué artículo buscas?"
-            action="Buscar"
-            styles="button--search button--yellow"
-          />
           <div className="header__search--avatar">
-            <figure>
-              <img className="avatar" src={avatar} alt="Avatar de usuario" />
-            </figure>
+            <span style={{ color: "white" }}>Bienvenido {usuario}!</span>
+            <button
+              className="button button--space button--yellow"
+              onClick={handleChange}
+            >
+              Cerrar Sesion
+            </button>
           </div>
         </>
       )}
